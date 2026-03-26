@@ -38,7 +38,7 @@ public class MainMenu {
                     showLoginMenu();
                     break;
                 case 3:
-                    System.out.println("✅ Cảm ơn đã sử dụng hệ thống. Tạm biệt!");
+                    System.out.println(" Cảm ơn đã sử dụng hệ thống. Tạm biệt!");
                     System.exit(0);
                     break;
             }

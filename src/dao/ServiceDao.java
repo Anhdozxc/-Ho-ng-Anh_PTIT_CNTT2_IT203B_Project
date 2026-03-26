@@ -31,7 +31,7 @@ public class ServiceDao {
             int rowsInserted = stmt.executeUpdate();
             return rowsInserted > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi thêm dịch vụ: " + e.getMessage());
+            System.out.println(" Lỗi thêm dịch vụ: " + e.getMessage());
             return false;
         }
     }
@@ -53,7 +53,7 @@ public class ServiceDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy dịch vụ theo ID: " + e.getMessage());
+            System.out.println(" Lỗi lấy dịch vụ theo ID: " + e.getMessage());
         }
         return null;
     }
@@ -74,7 +74,7 @@ public class ServiceDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy dịch vụ theo tên: " + e.getMessage());
+            System.out.println(" Lỗi lấy dịch vụ theo tên: " + e.getMessage());
         }
         return null;
     }
@@ -94,7 +94,7 @@ public class ServiceDao {
                 services.add(mapResultSetToService(rs));
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy danh sách dịch vụ: " + e.getMessage());
+            System.out.println(" Lỗi lấy danh sách dịch vụ: " + e.getMessage());
         }
         return services;
     }
@@ -116,7 +116,7 @@ public class ServiceDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy dịch vụ theo trạng thái: " + e.getMessage());
+            System.out.println(" Lỗi lấy dịch vụ theo trạng thái: " + e.getMessage());
         }
         return services;
     }
@@ -148,7 +148,7 @@ public class ServiceDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi cập nhật dịch vụ: " + e.getMessage());
+            System.out.println(" Lỗi cập nhật dịch vụ: " + e.getMessage());
             return false;
         }
     }
@@ -168,7 +168,7 @@ public class ServiceDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi cập nhật giá: " + e.getMessage());
+            System.out.println(" Lỗi cập nhật giá: " + e.getMessage());
             return false;
         }
     }
@@ -188,7 +188,7 @@ public class ServiceDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi cập nhật trạng thái: " + e.getMessage());
+            System.out.println(" Lỗi cập nhật trạng thái: " + e.getMessage());
             return false;
         }
     }
@@ -207,7 +207,7 @@ public class ServiceDao {
             int rowsDeleted = stmt.executeUpdate();
             return rowsDeleted > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi xóa dịch vụ: " + e.getMessage());
+            System.out.println(" Lỗi xóa dịch vụ: " + e.getMessage());
             return false;
         }
     }
@@ -234,7 +234,7 @@ public class ServiceDao {
                 return rs.getInt("total");
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi đếm dịch vụ: " + e.getMessage());
+            System.out.println(" Lỗi đếm dịch vụ: " + e.getMessage());
         }
         return 0;
     }

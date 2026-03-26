@@ -49,7 +49,7 @@ public class UserDao {
      */
     public User getUserById(int id) {
         String sql = "SELECT * FROM users WHERE id = ?";
-        
+
         try (Connection conn = DBUtil.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             
@@ -60,7 +60,7 @@ public class UserDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy người dùng theo ID: " + e.getMessage());
+            System.out.println(" Lỗi lấy người dùng theo ID: " + e.getMessage());
         }
         return null;
     }
@@ -81,7 +81,7 @@ public class UserDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy người dùng theo username: " + e.getMessage());
+            System.out.println(" Lỗi lấy người dùng theo username: " + e.getMessage());
         }
         return null;
     }
@@ -101,7 +101,7 @@ public class UserDao {
                 users.add(mapResultSetToUser(rs));
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy danh sách người dùng: " + e.getMessage());
+            System.out.println(" Lỗi lấy danh sách người dùng: " + e.getMessage());
         }
         return users;
     }
@@ -123,7 +123,7 @@ public class UserDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy người dùng theo vai trò: " + e.getMessage());
+            System.out.println(" Lỗi lấy người dùng theo vai trò: " + e.getMessage());
         }
         return users;
     }
@@ -154,7 +154,7 @@ public class UserDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi cập nhật người dùng: " + e.getMessage());
+            System.out.println(" Lỗi cập nhật người dùng: " + e.getMessage());
             return false;
         }
     }
@@ -174,7 +174,7 @@ public class UserDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi đổi mật khẩu: " + e.getMessage());
+            System.out.println(" Lỗi đổi mật khẩu: " + e.getMessage());
             return false;
         }
     }
@@ -194,7 +194,7 @@ public class UserDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi cập nhật trạng thái: " + e.getMessage());
+            System.out.println(" Lỗi cập nhật trạng thái: " + e.getMessage());
             return false;
         }
     }
@@ -213,7 +213,7 @@ public class UserDao {
             int rowsDeleted = stmt.executeUpdate();
             return rowsDeleted > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi xóa người dùng: " + e.getMessage());
+            System.out.println(" Lỗi xóa người dùng: " + e.getMessage());
             return false;
         }
     }
@@ -240,7 +240,7 @@ public class UserDao {
                 return rs.getInt("total");
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi đếm người dùng: " + e.getMessage());
+            System.out.println(" Lỗi đếm người dùng: " + e.getMessage());
         }
         return 0;
     }

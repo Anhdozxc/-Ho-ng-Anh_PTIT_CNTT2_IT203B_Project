@@ -57,7 +57,7 @@ public class SupportStaffMenu {
                     showProfileUpdate();
                     break;
                 case 4:
-                    System.out.println("✅ Đã đăng xuất. Tạm biệt!");
+                    System.out.println(" Đã đăng xuất. Tạm biệt!");
                     return;
             }
         }

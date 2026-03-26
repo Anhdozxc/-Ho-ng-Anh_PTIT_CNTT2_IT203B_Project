@@ -29,7 +29,7 @@ public class BookingServiceDao {
             int rowsInserted = stmt.executeUpdate();
             return rowsInserted > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi thêm dịch vụ vào phiếu đặt: " + e.getMessage());
+            System.out.println(" Lỗi thêm dịch vụ vào phiếu đặt: " + e.getMessage());
             return false;
         }
     }
@@ -51,7 +51,7 @@ public class BookingServiceDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy chi tiết dịch vụ: " + e.getMessage());
+            System.out.println(" Lỗi lấy chi tiết dịch vụ: " + e.getMessage());
         }
         return null;
     }
@@ -73,7 +73,7 @@ public class BookingServiceDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy dịch vụ của phiếu đặt: " + e.getMessage());
+            System.out.println(" Lỗi lấy dịch vụ của phiếu đặt: " + e.getMessage());
         }
         return details;
     }
@@ -94,7 +94,7 @@ public class BookingServiceDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi cập nhật số lượng dịch vụ: " + e.getMessage());
+            System.out.println(" Lỗi cập nhật số lượng dịch vụ: " + e.getMessage());
             return false;
         }
     }
@@ -113,7 +113,7 @@ public class BookingServiceDao {
             int rowsDeleted = stmt.executeUpdate();
             return rowsDeleted > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi xóa chi tiết dịch vụ: " + e.getMessage());
+            System.out.println(" Lỗi xóa chi tiết dịch vụ: " + e.getMessage());
             return false;
         }
     }
@@ -131,7 +131,7 @@ public class BookingServiceDao {
             int rowsDeleted = stmt.executeUpdate();
             return rowsDeleted > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi xóa dịch vụ của phiếu đặt: " + e.getMessage());
+            System.out.println(" Lỗi xóa dịch vụ của phiếu đặt: " + e.getMessage());
             return false;
         }
     }

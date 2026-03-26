@@ -31,7 +31,7 @@ public class EquipmentDao {
             int rowsInserted = stmt.executeUpdate();
             return rowsInserted > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi thêm thiết bị: " + e.getMessage());
+            System.out.println(" Lỗi thêm thiết bị: " + e.getMessage());
             return false;
         }
     }
@@ -53,7 +53,7 @@ public class EquipmentDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy thiết bị theo ID: " + e.getMessage());
+            System.out.println(" Lỗi lấy thiết bị theo ID: " + e.getMessage());
         }
         return null;
     }
@@ -74,7 +74,7 @@ public class EquipmentDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy thiết bị theo tên: " + e.getMessage());
+            System.out.println(" Lỗi lấy thiết bị theo tên: " + e.getMessage());
         }
         return null;
     }
@@ -94,7 +94,7 @@ public class EquipmentDao {
                 equipmentList.add(mapResultSetToEquipment(rs));
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy danh sách thiết bị: " + e.getMessage());
+            System.out.println(" Lỗi lấy danh sách thiết bị: " + e.getMessage());
         }
         return equipmentList;
     }
@@ -116,7 +116,7 @@ public class EquipmentDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy thiết bị theo trạng thái: " + e.getMessage());
+            System.out.println(" Lỗi lấy thiết bị theo trạng thái: " + e.getMessage());
         }
         return equipmentList;
     }
@@ -148,7 +148,7 @@ public class EquipmentDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi cập nhật thiết bị: " + e.getMessage());
+            System.out.println(" Lỗi cập nhật thiết bị: " + e.getMessage());
             return false;
         }
     }
@@ -168,7 +168,7 @@ public class EquipmentDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi cập nhật số lượng: " + e.getMessage());
+            System.out.println(" Lỗi cập nhật số lượng: " + e.getMessage());
             return false;
         }
     }
@@ -188,7 +188,7 @@ public class EquipmentDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi giảm số lượng: " + e.getMessage());
+            System.out.println(" Lỗi giảm số lượng: " + e.getMessage());
             return false;
         }
     }
@@ -208,7 +208,7 @@ public class EquipmentDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi tăng số lượng: " + e.getMessage());
+            System.out.println(" Lỗi tăng số lượng: " + e.getMessage());
             return false;
         }
     }
@@ -228,7 +228,7 @@ public class EquipmentDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi cập nhật trạng thái: " + e.getMessage());
+            System.out.println(" Lỗi cập nhật trạng thái: " + e.getMessage());
             return false;
         }
     }
@@ -247,7 +247,7 @@ public class EquipmentDao {
             int rowsDeleted = stmt.executeUpdate();
             return rowsDeleted > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi xóa thiết bị: " + e.getMessage());
+            System.out.println(" Lỗi xóa thiết bị: " + e.getMessage());
             return false;
         }
     }
@@ -274,7 +274,7 @@ public class EquipmentDao {
                 return rs.getInt("total");
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi đếm thiết bị: " + e.getMessage());
+            System.out.println(" Lỗi đếm thiết bị: " + e.getMessage());
         }
         return 0;
     }

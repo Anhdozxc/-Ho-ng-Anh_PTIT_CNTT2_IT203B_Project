@@ -49,7 +49,7 @@ public class ServiceService {
                                  String description, String status) {
         Service service = serviceDao.getServiceById(serviceId);
         if (service == null) {
-            System.out.println("❌ Dịch vụ không tồn tại");
+            System.out.println("Dịch vụ không tồn tại");
             return false;
         }
         
@@ -66,7 +66,7 @@ public class ServiceService {
      */
     public boolean updatePrice(int serviceId, double newPrice) {
         if (!ValidationUtil.isPositiveDouble(newPrice)) {
-            System.out.println("❌ Giá phải lớn hơn 0");
+            System.out.println(" Giá phải lớn hơn 0");
             return false;
         }
         

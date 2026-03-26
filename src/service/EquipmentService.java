@@ -49,7 +49,7 @@ public class EquipmentService {
                                    int availableQuantity, String status) {
         Equipment equipment = equipmentDao.getEquipmentById(equipmentId);
         if (equipment == null) {
-            System.out.println("❌ Thiết bị không tồn tại");
+            System.out.println(" Thiết bị không tồn tại");
             return false;
         }
         
@@ -67,12 +67,12 @@ public class EquipmentService {
     public boolean updateAvailableQuantity(int equipmentId, int newQuantity) {
         Equipment equipment = equipmentDao.getEquipmentById(equipmentId);
         if (equipment == null) {
-            System.out.println("❌ Thiết bị không tồn tại");
+            System.out.println(" Thiết bị không tồn tại");
             return false;
         }
         
         if (newQuantity < 0 || newQuantity > equipment.getTotalQuantity()) {
-            System.out.println("❌ Số lượng không hợp lệ");
+            System.out.println(" Số lượng không hợp lệ");
             return false;
         }
         
@@ -85,12 +85,12 @@ public class EquipmentService {
     public boolean decreaseAvailableQuantity(int equipmentId, int quantity) {
         Equipment equipment = equipmentDao.getEquipmentById(equipmentId);
         if (equipment == null) {
-            System.out.println("❌ Thiết bị không tồn tại");
+            System.out.println(" Thiết bị không tồn tại");
             return false;
         }
         
         if (equipment.getAvailableQuantity() < quantity) {
-            System.out.println("❌ Số lượng khả dụng không đủ (Hiện có: " + 
+            System.out.println(" Số lượng khả dụng không đủ (Hiện có: " +
                              equipment.getAvailableQuantity() + ")");
             return false;
         }
@@ -104,12 +104,12 @@ public class EquipmentService {
     public boolean increaseAvailableQuantity(int equipmentId, int quantity) {
         Equipment equipment = equipmentDao.getEquipmentById(equipmentId);
         if (equipment == null) {
-            System.out.println("❌ Thiết bị không tồn tại");
+            System.out.println(" Thiết bị không tồn tại");
             return false;
         }
         
         if (equipment.getAvailableQuantity() + quantity > equipment.getTotalQuantity()) {
-            System.out.println("❌ Vượt quá tổng số lượng thiết bị");
+            System.out.println(" Vượt quá tổng số lượng thiết bị");
             return false;
         }
         

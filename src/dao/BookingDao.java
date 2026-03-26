@@ -40,7 +40,7 @@ public class BookingDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi thêm phiếu đặt phòng: " + e.getMessage());
+            System.out.println(" Lỗi thêm phiếu đặt phòng: " + e.getMessage());
         }
         return -1;
     }
@@ -62,7 +62,7 @@ public class BookingDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy phiếu đặt phòng: " + e.getMessage());
+            System.out.println(" Lỗi lấy phiếu đặt phòng: " + e.getMessage());
         }
         return null;
     }
@@ -82,7 +82,7 @@ public class BookingDao {
                 bookings.add(mapResultSetToBooking(rs));
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy danh sách phiếu đặt: " + e.getMessage());
+            System.out.println(" Lỗi lấy danh sách phiếu đặt: " + e.getMessage());
         }
         return bookings;
     }
@@ -104,7 +104,7 @@ public class BookingDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy phiếu đặt của nhân viên: " + e.getMessage());
+            System.out.println(" Lỗi lấy phiếu đặt của nhân viên: " + e.getMessage());
         }
         return bookings;
     }
@@ -126,7 +126,7 @@ public class BookingDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy phiếu đặt theo trạng thái: " + e.getMessage());
+            System.out.println(" Lỗi lấy phiếu đặt theo trạng thái: " + e.getMessage());
         }
         return bookings;
     }
@@ -155,7 +155,7 @@ public class BookingDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy phiếu đặt của nhân viên hỗ trợ: " + e.getMessage());
+            System.out.println(" Lỗi lấy phiếu đặt của nhân viên hỗ trợ: " + e.getMessage());
         }
         return bookings;
     }
@@ -190,7 +190,7 @@ public class BookingDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi kiểm tra xung đột lịch: " + e.getMessage());
+            System.out.println(" Lỗi kiểm tra xung đột lịch: " + e.getMessage());
         }
         return false;
     }
@@ -211,7 +211,7 @@ public class BookingDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi cập nhật trạng thái phiếu đặt: " + e.getMessage());
+            System.out.println(" Lỗi cập nhật trạng thái phiếu đặt: " + e.getMessage());
             return false;
         }
     }
@@ -231,7 +231,7 @@ public class BookingDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi phân công nhân viên hỗ trợ: " + e.getMessage());
+            System.out.println(" Lỗi phân công nhân viên hỗ trợ: " + e.getMessage());
             return false;
         }
     }
@@ -251,7 +251,7 @@ public class BookingDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi cập nhật ghi chú: " + e.getMessage());
+            System.out.println(" Lỗi cập nhật ghi chú: " + e.getMessage());
             return false;
         }
     }
@@ -270,7 +270,7 @@ public class BookingDao {
             int rowsDeleted = stmt.executeUpdate();
             return rowsDeleted > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi xóa phiếu đặt: " + e.getMessage());
+            System.out.println(" Lỗi xóa phiếu đặt: " + e.getMessage());
             return false;
         }
     }
@@ -290,7 +290,7 @@ public class BookingDao {
                 return rs.getInt("total");
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi đếm phiếu đặt: " + e.getMessage());
+            System.out.println(" Lỗi đếm phiếu đặt: " + e.getMessage());
         }
         return 0;
     }
@@ -311,7 +311,7 @@ public class BookingDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi đếm phiếu đặt theo trạng thái: " + e.getMessage());
+            System.out.println(" Lỗi đếm phiếu đặt theo trạng thái: " + e.getMessage());
         }
         return 0;
     }

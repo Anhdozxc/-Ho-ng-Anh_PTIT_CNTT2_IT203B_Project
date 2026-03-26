@@ -32,7 +32,7 @@ public class RoomDao {
             int rowsInserted = stmt.executeUpdate();
             return rowsInserted > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi thêm phòng: " + e.getMessage());
+            System.out.println(" Lỗi thêm phòng: " + e.getMessage());
             return false;
         }
     }
@@ -54,7 +54,7 @@ public class RoomDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy phòng theo ID: " + e.getMessage());
+            System.out.println(" Lỗi lấy phòng theo ID: " + e.getMessage());
         }
         return null;
     }
@@ -75,7 +75,7 @@ public class RoomDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy phòng theo tên: " + e.getMessage());
+            System.out.println(" Lỗi lấy phòng theo tên: " + e.getMessage());
         }
         return null;
     }
@@ -95,7 +95,7 @@ public class RoomDao {
                 rooms.add(mapResultSetToRoom(rs));
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy danh sách phòng: " + e.getMessage());
+            System.out.println(" Lỗi lấy danh sách phòng: " + e.getMessage());
         }
         return rooms;
     }
@@ -117,7 +117,7 @@ public class RoomDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy phòng theo trạng thái: " + e.getMessage());
+            System.out.println(" Lỗi lấy phòng theo trạng thái: " + e.getMessage());
         }
         return rooms;
     }
@@ -146,7 +146,7 @@ public class RoomDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi lấy phòng theo sức chứa: " + e.getMessage());
+            System.out.println(" Lỗi lấy phòng theo sức chứa: " + e.getMessage());
         }
         return rooms;
     }
@@ -172,7 +172,7 @@ public class RoomDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi cập nhật phòng: " + e.getMessage());
+            System.out.println(" Lỗi cập nhật phòng: " + e.getMessage());
             return false;
         }
     }
@@ -192,7 +192,7 @@ public class RoomDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi cập nhật trạng thái phòng: " + e.getMessage());
+            System.out.println("Lỗi cập nhật trạng thái phòng: " + e.getMessage());
             return false;
         }
     }
@@ -211,7 +211,7 @@ public class RoomDao {
             int rowsDeleted = stmt.executeUpdate();
             return rowsDeleted > 0;
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi xóa phòng: " + e.getMessage());
+            System.out.println(" Lỗi xóa phòng: " + e.getMessage());
             return false;
         }
     }
@@ -238,7 +238,7 @@ public class RoomDao {
                 return rs.getInt("total");
             }
         } catch (SQLException e) {
-            System.out.println("❌ Lỗi đếm phòng: " + e.getMessage());
+            System.out.println(" Lỗi đếm phòng: " + e.getMessage());
         }
         return 0;
     }
