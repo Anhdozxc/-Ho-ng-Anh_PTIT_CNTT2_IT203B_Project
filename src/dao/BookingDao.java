@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class BookingDao {
 
-    // ========== CREATE: Thêm đặt phòng ==========
+    // CREATE: Thêm đặt phòng
     /**
      * Thêm phiếu đặt phòng mới vào database
      */
@@ -45,7 +45,7 @@ public class BookingDao {
         return -1;
     }
 
-    // ========== READ: Lấy thông tin đặt phòng ==========
+    // READ: Lấy thông tin đặt phòng
     /**
      * Lấy phiếu đặt phòng theo ID
      */
@@ -195,7 +195,7 @@ public class BookingDao {
         return false;
     }
 
-    // ========== UPDATE: Cập nhật phiếu đặt ==========
+    //  UPDATE: Cập nhật phiếu đặt
     /**
      * Cập nhật trạng thái phiếu đặt
      */
@@ -256,7 +256,7 @@ public class BookingDao {
         }
     }
 
-    // ========== DELETE: Xóa phiếu đặt ==========
+    //  DELETE: Xóa phiếu đặt
     /**
      * Xóa phiếu đặt (chỉ khi trạng thái PENDING)
      */
@@ -275,7 +275,7 @@ public class BookingDao {
         }
     }
 
-    // ========== KIỂM TRA ==========
+    //  KIỂM TRA
     /**
      * Lấy tổng số phiếu đặt
      */
@@ -316,7 +316,7 @@ public class BookingDao {
         return 0;
     }
 
-    // ========== PHƯƠNG THỨC HỖ TRỢ ==========
+    //  PHƯƠNG THỨC HỖ TRỢ
     /**
      * Ánh xạ ResultSet thành đối tượng Booking
      */

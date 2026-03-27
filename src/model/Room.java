@@ -14,7 +14,7 @@ public class Room {
     private String status;
     private LocalDateTime createdDate;
 
-    // ========== CONSTRUCTOR ==========
+    //  CONSTRUCTOR
     public Room() {
     }
 
@@ -37,7 +37,7 @@ public class Room {
         this.createdDate = createdDate;
     }
 
-    // ========== GETTERS ==========
+    //  GETTERS
     public int getId() {
         return id;
     }
@@ -66,7 +66,7 @@ public class Room {
         return createdDate;
     }
 
-    // ========== SETTERS ==========
+    //  SETTERS
     public void setId(int id) {
         this.id = id;
     }

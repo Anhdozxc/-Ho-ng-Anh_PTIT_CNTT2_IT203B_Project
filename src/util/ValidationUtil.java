@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
  */
 public class ValidationUtil {
 
-    // ========== KIỂM TRA CHUỖI ==========
+    //  KIỂM TRA CHUỖI
     /**
      * Kiểm tra chuỗi không trống
      */
@@ -23,7 +23,7 @@ public class ValidationUtil {
         return str != null && str.length() >= minLength && str.length() <= maxLength;
     }
 
-    // ========== KIỂM TRA ĐIỆN THOẠI ==========
+    // KIỂM TRA ĐIỆN THOẠI
     /**
      * Kiểm tra số điện thoại hợp lệ (10 chữ số)
      */
@@ -31,7 +31,7 @@ public class ValidationUtil {
         return phone != null && phone.matches("\\d{10}");
     }
 
-    // ========== KIỂM TRA EMAIL ==========
+    //  KIỂM TRA EMAIL
     /**
      * Kiểm tra email hợp lệ
      */
@@ -39,7 +39,7 @@ public class ValidationUtil {
         return email != null && email.matches("^[A-Za-z0-9+_.-]+@(.+)$");
     }
 
-    // ========== KIỂM TRA USERNAME ==========
+    //  KIỂM TRA USERNAME
     /**
      * Kiểm tra username hợp lệ (3-20 ký tự)
      */
@@ -47,7 +47,7 @@ public class ValidationUtil {
         return username != null && username.matches("^[a-zA-Z0-9_]{3,20}$");
     }
 
-    // ========== KIỂM TRA MẬT KHẨU ==========
+    //  KIỂM TRA MẬT KHẨU
     /**
      * Kiểm tra mật khẩu hợp lệ (tối thiểu 6 ký tự)
      */
@@ -55,7 +55,7 @@ public class ValidationUtil {
         return password != null && password.length() >= 6;
     }
 
-    // ========== KIỂM TRA SỐ ==========
+    //  KIỂM TRA SỐ
     /**
      * Kiểm tra số nguyên dương
      */
@@ -77,7 +77,7 @@ public class ValidationUtil {
         return number > 0;
     }
 
-    // ========== KIỂM TRA NGÀY GIỜ ==========
+    //  KIỂM TRA NGÀY GIỜ
     /**
      * Kiểm tra thời gian bắt đầu < thời gian kết thúc
      */
@@ -99,7 +99,7 @@ public class ValidationUtil {
         return isTimeNotInPast(startTime);
     }
 
-    // ========== KIỂM TRA SỨC CHỨA PHÒNG ==========
+    //  KIỂM TRA SỨC CHỨA PHÒNG
     /**
      * Kiểm tra số người tham dự có hợp lệ
      */
@@ -107,7 +107,7 @@ public class ValidationUtil {
         return participantCount > 0 && participantCount <= roomCapacity;
     }
 
-    // ========== KIỂM TRA VAI TRÒ ==========
+    //  KIỂM TRA VAI TRÒ
     /**
      * Kiểm tra vai trò hợp lệ
      */
@@ -117,7 +117,7 @@ public class ValidationUtil {
         return role.equals("EMPLOYEE") || role.equals("SUPPORT_STAFF") || role.equals("ADMIN");
     }
 
-    // ========== KIỂM TRA TRẠNG THÁI ==========
+    //  KIỂM TRA TRẠNG THÁI
     /**
      * Kiểm tra trạng thái booking hợp lệ
      */
@@ -137,7 +137,7 @@ public class ValidationUtil {
         return status.equals("AVAILABLE") || status.equals("MAINTENANCE");
     }
 
-    // ========== KIỂM TRA TỰ DỌN DẸP ==========
+    // KIỂM TRA TỰ DỌN DẸP
     /**
      * Kiểm tra tất cả các trường yêu cầu không trống
      */

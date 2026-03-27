@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class ServiceDao {
 
-    // ========== CREATE: Thêm dịch vụ ==========
+    //  CREATE: Thêm dịch vụ
     /**
      * Thêm dịch vụ mới vào database
      */
@@ -36,7 +36,7 @@ public class ServiceDao {
         }
     }
 
-    // ========== READ: Lấy thông tin dịch vụ ==========
+    // READ: Lấy thông tin dịch vụ
     /**
      * Lấy dịch vụ theo ID
      */
@@ -128,7 +128,7 @@ public class ServiceDao {
         return getServicesByStatus("ACTIVE");
     }
 
-    // ========== UPDATE: Cập nhật dịch vụ ==========
+    //  UPDATE: Cập nhật dịch vụ
     /**
      * Cập nhật thông tin dịch vụ
      */
@@ -193,7 +193,7 @@ public class ServiceDao {
         }
     }
 
-    // ========== DELETE: Xóa dịch vụ ==========
+    // DELETE: Xóa dịch vụ
     /**
      * Xóa dịch vụ theo ID
      */
@@ -212,7 +212,7 @@ public class ServiceDao {
         }
     }
 
-    // ========== KIỂM TRA ==========
+    //  KIỂM TRA
     /**
      * Kiểm tra tên dịch vụ đã tồn tại chưa
      */
@@ -239,7 +239,7 @@ public class ServiceDao {
         return 0;
     }
 
-    // ========== PHƯƠNG THỨC HỖ TRỢ ==========
+    // PHƯƠNG THỨC HỖ TRỢ
     /**
      * Ánh xạ ResultSet thành đối tượng Service
      */

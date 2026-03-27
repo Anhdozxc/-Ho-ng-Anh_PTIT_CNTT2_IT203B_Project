@@ -9,7 +9,7 @@ public class BookingServiceDetail {
     private int serviceId;
     private int quantity;
 
-    // ========== CONSTRUCTOR ==========
+    //  CONSTRUCTOR
     public BookingServiceDetail() {
     }
 
@@ -26,7 +26,7 @@ public class BookingServiceDetail {
         this.quantity = quantity;
     }
 
-    // ========== GETTERS ==========
+    //  GETTERS
     public int getId() {
         return id;
     }
@@ -43,7 +43,7 @@ public class BookingServiceDetail {
         return quantity;
     }
 
-    // ========== SETTERS ==========
+    //  SETTERS
     public void setId(int id) {
         this.id = id;
     }

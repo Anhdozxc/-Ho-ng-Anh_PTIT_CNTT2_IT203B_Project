@@ -63,7 +63,7 @@ public class SupportStaffMenu {
         }
     }
 
-    // ========== XEM PHIẾU ĐẶT ĐƯỢC PHÂN CÔNG ==========
+    // XEM PHIẾU ĐẶT ĐƯỢC PHÂN CÔNG
     private void viewMyAssignedBookings() {
         List<Booking> bookings = bookingService.getBookingsBySupportStaff(currentUser.getId());
         if (bookings.isEmpty()) {
@@ -96,7 +96,7 @@ public class SupportStaffMenu {
         InputUtil.inputString("\nNhấn Enter để tiếp tục...");
     }
 
-    // ========== CẬP NHẬT TRẠNG THÁI CHUẨN BỊ ==========
+    // CẬP NHẬT TRẠNG THÁI CHUẨN BỊ
     private void updateBookingStatus() {
         List<Booking> bookings = bookingService.getBookingsBySupportStaff(currentUser.getId());
         if (bookings.isEmpty()) {
@@ -159,7 +159,7 @@ public class SupportStaffMenu {
         InputUtil.inputString("\nNhấn Enter để tiếp tục...");
     }
 
-    // ========== CẬP NHẬT HỒ SƠ ==========
+    //  CẬP NHẬT HỒ SƠ
     private void showProfileUpdate() {
         System.out.println("\n========================================");
         System.out.println("  CẬP NHẬT HỒ SƠ CÁ NHÂN");

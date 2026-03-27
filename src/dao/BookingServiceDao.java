@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class BookingServiceDao {
 
-    // ========== CREATE: Thêm dịch vụ vào phiếu đặt ==========
+    //  CREATE: Thêm dịch vụ vào phiếu đặt
     /**
      * Thêm chi tiết dịch vụ vào phiếu đặt
      */
@@ -34,7 +34,7 @@ public class BookingServiceDao {
         }
     }
 
-    // ========== READ: Lấy chi tiết dịch vụ ==========
+    //  READ: Lấy chi tiết dịch vụ
     /**
      * Lấy chi tiết dịch vụ theo ID
      */
@@ -78,7 +78,7 @@ public class BookingServiceDao {
         return details;
     }
 
-    // ========== UPDATE: Cập nhật chi tiết ==========
+    //  UPDATE: Cập nhật chi tiết
     /**
      * Cập nhật số lượng dịch vụ
      */
@@ -99,7 +99,7 @@ public class BookingServiceDao {
         }
     }
 
-    // ========== DELETE: Xóa chi tiết ==========
+    // DELETE: Xóa chi tiết
     /**
      * Xóa một dịch vụ khỏi phiếu đặt
      */
@@ -136,7 +136,7 @@ public class BookingServiceDao {
         }
     }
 
-    // ========== PHƯƠNG THỨC HỖ TRỢ ==========
+    //  PHƯƠNG THỨC HỖ TRỢ
     /**
      * Ánh xạ ResultSet thành BookingServiceDetail
      */

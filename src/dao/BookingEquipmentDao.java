@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class BookingEquipmentDao {
 
-    // ========== CREATE: Thêm thiết bị vào phiếu đặt ==========
+    //  CREATE: Thêm thiết bị vào phiếu đặt
     /**
      * Thêm chi tiết thiết bị vào phiếu đặt
      */
@@ -34,7 +34,7 @@ public class BookingEquipmentDao {
         }
     }
 
-    // ========== READ: Lấy chi tiết thiết bị ==========
+    //  READ: Lấy chi tiết thiết bị
     /**
      * Lấy chi tiết thiết bị theo ID
      */
@@ -78,7 +78,7 @@ public class BookingEquipmentDao {
         return details;
     }
 
-    // ========== UPDATE: Cap nhat chi tiet ==========
+    //  UPDATE: Cap nhat chi tiet
     /**
      * Cập nhật số lượng thiết bị
      */
@@ -99,7 +99,7 @@ public class BookingEquipmentDao {
         }
     }
 
-    // ========== DELETE: Xoa chi tiet ==========
+    //  DELETE: Xoa chi tiet
     /**
      * Xóa một thiết bị khỏi phiếu đặt
      */
@@ -136,7 +136,7 @@ public class BookingEquipmentDao {
         }
     }
 
-    // ========== PHƯƠNG THỨC HỖ TRỢ ==========
+    // PHƯƠNG THỨC HỖ TRỢ
     /**
      * Ánh xạ ResultSet thành BookingEquipmentDetail
      */

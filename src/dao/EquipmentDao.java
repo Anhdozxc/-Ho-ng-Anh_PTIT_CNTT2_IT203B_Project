@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class EquipmentDao {
 
-    // ========== CREATE: Thêm thiết bị ==========
+    //  CREATE: Thêm thiết bị
     /**
      * Thêm thiết bị mới vào database
      */
@@ -36,7 +36,7 @@ public class EquipmentDao {
         }
     }
 
-    // ========== READ: Lấy thông tin thiết bị ==========
+    //  READ: Lấy thông tin thiết bị
     /**
      * Lấy thiết bị theo ID
      */
@@ -128,7 +128,7 @@ public class EquipmentDao {
         return getEquipmentByStatus("ACTIVE");
     }
 
-    // ========== UPDATE: Cập nhật thông tin thiết bị ==========
+    //  UPDATE: Cập nhật thông tin thiết bị
     /**
      * Cập nhật thông tin thiết bị
      */
@@ -233,7 +233,7 @@ public class EquipmentDao {
         }
     }
 
-    // ========== DELETE: Xóa thiết bị ==========
+    // =DELETE: Xóa thiết bị
     /**
      * Xóa thiết bị theo ID
      */
@@ -252,7 +252,7 @@ public class EquipmentDao {
         }
     }
 
-    // ========== KIỂM TRA ==========
+    //  KIỂM TRA
     /**
      * Kiểm tra tên thiết bị đã tồn tại chưa
      */
@@ -279,7 +279,7 @@ public class EquipmentDao {
         return 0;
     }
 
-    // ========== PHƯƠNG THỨC HỖ TRỢ ==========
+    //  PHƯƠNG THỨC HỖ TRỢ
     /**
      * Ánh xạ ResultSet thành đối tượng Equipment
      */

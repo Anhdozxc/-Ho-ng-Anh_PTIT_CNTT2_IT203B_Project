@@ -17,7 +17,7 @@ public class User {
     private String status;
     private LocalDateTime createdDate;
 
-    // ========== CONSTRUCTOR ==========
+    // CONSTRUCTOR
     /**
      * Constructor không có tham số
      */
@@ -54,7 +54,7 @@ public class User {
         this.createdDate = createdDate;
     }
 
-    // ========== GETTERS ==========
+    //  GETTERS
     public int getId() {
         return id;
     }
@@ -91,7 +91,7 @@ public class User {
         return createdDate;
     }
 
-    // ========== SETTERS ==========
+    //  SETTERS
     public void setId(int id) {
         this.id = id;
     }
@@ -128,7 +128,7 @@ public class User {
         this.createdDate = createdDate;
     }
 
-    // ========== PHƯƠNG THỨC TIỆN ÍCH ==========
+    //  PHƯƠNG THỨC TIỆN ÍCH
     /**
      * In thông tin người dùng
      */

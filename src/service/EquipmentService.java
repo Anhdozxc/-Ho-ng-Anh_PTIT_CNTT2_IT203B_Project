@@ -15,7 +15,7 @@ public class EquipmentService {
         this.equipmentDao = new EquipmentDao();
     }
 
-    // ========== THÊM THIẾT BỊ ==========
+    //  THÊM THIẾT BỊ
     /**
      * Thêm thiết bị mới
      */
@@ -41,7 +41,7 @@ public class EquipmentService {
         return equipmentDao.addEquipment(newEquipment);
     }
 
-    // ========== CẬP NHẬT THIẾT BỊ ==========
+    //  CẬP NHẬT THIẾT BỊ
     /**
      * Cập nhật thông tin thiết bị
      */
@@ -123,7 +123,7 @@ public class EquipmentService {
         return equipmentDao.updateStatus(equipmentId, status);
     }
 
-    // ========== LẤY THÔNG TIN THIẾT BỊ ==========
+    // LẤY THÔNG TIN THIẾT BỊ
     /**
      * Lấy danh sách tất cả thiết bị
      */
@@ -154,7 +154,7 @@ public class EquipmentService {
         return equipment.getAvailableQuantity() >= quantityNeeded && "ACTIVE".equals(equipment.getStatus());
     }
 
-    // ========== XÓA THIẾT BỊ ==========
+    //  XÓA THIẾT BỊ
     /**
      * Xóa thiết bị
      */

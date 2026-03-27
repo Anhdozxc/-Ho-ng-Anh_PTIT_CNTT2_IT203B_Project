@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class RoomDao {
 
-    // ========== CREATE: Thêm phòng ==========
+    //  CREATE: Thêm phòng
     /**
      * Thêm phòng mới vào database
      */
@@ -37,7 +37,7 @@ public class RoomDao {
         }
     }
 
-    // ========== READ: Lấy thông tin phòng ==========
+    // READ: Lấy thông tin phòng
     /**
      * Lấy phòng theo ID
      */
@@ -151,7 +151,7 @@ public class RoomDao {
         return rooms;
     }
 
-    // ========== UPDATE: Cập nhật thông tin phòng ==========
+    //  UPDATE: Cập nhật thông tin phòng
     /**
      * Cập nhật thông tin phòng
      */
@@ -197,7 +197,7 @@ public class RoomDao {
         }
     }
 
-    // ========== DELETE: Xóa phòng ==========
+    //  DELETE: Xóa phòng
     /**
      * Xóa phòng theo ID
      */
@@ -216,7 +216,7 @@ public class RoomDao {
         }
     }
 
-    // ========== KIỂM TRA ==========
+    //  KIỂM TRA
     /**
      * Kiểm tra tên phòng đã tồn tại chưa
      */
@@ -243,7 +243,7 @@ public class RoomDao {
         return 0;
     }
 
-    // ========== PHƯƠNG THỨC HỖ TRỢ ==========
+    //  PHƯƠNG THỨC HỖ TRỢ
     /**
      * Ánh xạ ResultSet thành đối tượng Room
      */

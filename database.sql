@@ -1,7 +1,6 @@
--- =====================================================
+
 -- HỆ THỐNG QUẢN LÝ ĐẶT PHÒNG HỌP & DỊCH VỤ VĂN PHÒNG
 -- Database: meeting_db
--- =====================================================
 
 -- Xóa database cũ nếu tồn tại (tuỳ chọn)
 DROP DATABASE IF EXISTS meeting_db;
@@ -10,10 +9,10 @@ DROP DATABASE IF EXISTS meeting_db;
 CREATE DATABASE IF NOT EXISTS meeting_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE meeting_db;
 
--- =====================================================
+
 -- BẢNG NGƯỜI DÙNG (Users)
 -- Vai trò: EMPLOYEE (Nhân viên), SUPPORT_STAFF (Nhân viên hỗ trợ), ADMIN (Quản trị viên)
--- =====================================================
+
 CREATE TABLE IF NOT EXISTS users (
     id INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(50) NOT NULL UNIQUE,
@@ -26,9 +25,9 @@ CREATE TABLE IF NOT EXISTS users (
     status VARCHAR(20) DEFAULT 'ACTIVE' COMMENT 'ACTIVE, INACTIVE'
 ) COMMENT 'Bảng quản lý người dùng hệ thống';
 
--- =====================================================
+
 -- BẢNG PHÒNG HỌP (Rooms)
--- =====================================================
+
 CREATE TABLE IF NOT EXISTS rooms (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL UNIQUE,
@@ -39,9 +38,9 @@ CREATE TABLE IF NOT EXISTS rooms (
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) COMMENT 'Bảng quản lý phòng họp';
 
--- =====================================================
+
 -- BẢNG THIẾT BỊ DI ĐỘNG (Equipment)
--- =====================================================
+
 CREATE TABLE IF NOT EXISTS equipment (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL UNIQUE,
@@ -51,9 +50,9 @@ CREATE TABLE IF NOT EXISTS equipment (
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) COMMENT 'Bảng quản lý thiết bị di động';
 
--- =====================================================
+
 -- BẢNG DỊCH VỤ (Services)
--- =====================================================
+
 CREATE TABLE IF NOT EXISTS services (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL UNIQUE,
@@ -63,10 +62,10 @@ CREATE TABLE IF NOT EXISTS services (
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) COMMENT 'Bảng quản lý dịch vụ (nước, trà, bánh, vệ sinh...)';
 
--- =====================================================
+
 -- BẢNG ĐẶT PHÒNG (Bookings)
 -- Trạng thái: PENDING (chờ duyệt), APPROVED (đã duyệt), REJECTED (từ chối), DONE (hoàn thành)
--- =====================================================
+
 CREATE TABLE IF NOT EXISTS bookings (
     id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT NOT NULL,
@@ -83,9 +82,7 @@ CREATE TABLE IF NOT EXISTS bookings (
     FOREIGN KEY (support_staff_id) REFERENCES users(id) ON DELETE SET NULL
 ) COMMENT 'Bảng quản lý đặt phòng';
 
--- =====================================================
 -- BẢNG CHI TIẾT DỊCH VỤ ĐẶT PHÒNG (Booking_Services)
--- =====================================================
 CREATE TABLE IF NOT EXISTS booking_services (
     id INT PRIMARY KEY AUTO_INCREMENT,
     booking_id INT NOT NULL,
@@ -95,9 +92,7 @@ CREATE TABLE IF NOT EXISTS booking_services (
     FOREIGN KEY (service_id) REFERENCES services(id) ON DELETE CASCADE
 ) COMMENT 'Bảng chi tiết dịch vụ của mỗi đặt phòng';
 
--- =====================================================
 -- BẢNG CHI TIẾT THIẾT BỊ ĐẶT PHÒNG (Booking_Equipment)
--- =====================================================
 CREATE TABLE IF NOT EXISTS booking_equipment (
     id INT PRIMARY KEY AUTO_INCREMENT,
     booking_id INT NOT NULL,
@@ -107,9 +102,7 @@ CREATE TABLE IF NOT EXISTS booking_equipment (
     FOREIGN KEY (equipment_id) REFERENCES equipment(id) ON DELETE CASCADE
 ) COMMENT 'Bảng chi tiết thiết bị của mỗi đặt phòng';
 
--- =====================================================
 -- DỮ LIỆU KHỞI TẠO (Seed Data)
--- =====================================================
 
 -- Tạo tài khoản mẫu (mật khẩu hash: 123456 bằng SHA-256)
 INSERT INTO users (username, password, role, fullname, phone, department, status) VALUES

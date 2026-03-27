@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class UserDao {
 
-    // ========== CREATE: Thêm người dùng mới ==========
+    //  CREATE: Thêm người dùng mới
     /**
      * Thêm người dùng mới vào database
      * @param user Đối tượng User cần thêm
@@ -43,7 +43,7 @@ public class UserDao {
         }
     }
 
-    // ========== READ: Lấy thông tin người dùng ==========
+    //  READ: Lấy thông tin người dùng
     /**
      * Lấy người dùng theo ID
      */
@@ -135,7 +135,7 @@ public class UserDao {
         return getUsersByRole("SUPPORT_STAFF");
     }
 
-    // ========== UPDATE: Cập nhật thông tin người dùng ==========
+    //  UPDATE: Cập nhật thông tin người dùng
     /**
      * Cập nhật thông tin người dùng
      */
@@ -199,7 +199,7 @@ public class UserDao {
         }
     }
 
-    // ========== DELETE: Xóa người dùng ==========
+    //  DELETE: Xóa người dùng
     /**
      * Xóa người dùng theo ID
      */
@@ -218,7 +218,7 @@ public class UserDao {
         }
     }
 
-    // ========== KIỂM TRA ==========
+    //  KIỂM TRA
     /**
      * Kiểm tra username đã tồn tại chưa
      */
@@ -245,7 +245,7 @@ public class UserDao {
         return 0;
     }
 
-    // ========== PHƯƠNG THỨC HỖ TRỢ ==========
+    //  PHƯƠNG THỨC HỖ TRỢ
     /**
      * Ánh xạ ResultSet thành đối tượng User
      */

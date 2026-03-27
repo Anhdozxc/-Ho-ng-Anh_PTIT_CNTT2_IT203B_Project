@@ -13,7 +13,7 @@ public class Service {
     private String status;
     private LocalDateTime createdDate;
 
-    // ========== CONSTRUCTOR ==========
+    //  CONSTRUCTOR
     public Service() {
     }
 
@@ -34,7 +34,7 @@ public class Service {
         this.createdDate = createdDate;
     }
 
-    // ========== GETTERS ==========
+    //  GETTERS
     public int getId() {
         return id;
     }
@@ -59,7 +59,7 @@ public class Service {
         return createdDate;
     }
 
-    // ========== SETTERS ==========
+    // SETTERS
     public void setId(int id) {
         this.id = id;
     }

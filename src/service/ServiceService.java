@@ -15,7 +15,7 @@ public class ServiceService {
         this.serviceDao = new ServiceDao();
     }
 
-    // ========== THÊM DỊCH VỤ ==========
+    //  THÊM DỊCH VỤ
     /**
      * Thêm dịch vụ mới
      */
@@ -41,7 +41,7 @@ public class ServiceService {
         return serviceDao.addService(newService);
     }
 
-    // ========== CẬP NHẬT DỊCH VỤ ==========
+    // CẬP NHẬT DỊCH VỤ
     /**
      * Cập nhật thông tin dịch vụ
      */
@@ -80,7 +80,7 @@ public class ServiceService {
         return serviceDao.updateStatus(serviceId, status);
     }
 
-    // ========== LẤY THÔNG TIN DỊCH VỤ ==========
+    //  LẤY THÔNG TIN DỊCH VỤ
     /**
      * Lấy danh sách tất cả dịch vụ
      */
@@ -102,7 +102,7 @@ public class ServiceService {
         return serviceDao.getActiveServices();
     }
 
-    // ========== XÓA DỊCH VỤ ==========
+    //  XÓA DỊCH VỤ
     /**
      * Xóa dịch vụ
      */

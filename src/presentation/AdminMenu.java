@@ -50,7 +50,7 @@ public class AdminMenu {
         }
     }
 
-    // ================= ROOM =================
+    //  ROOM
     private void roomMenu() {
         while (true) {
             System.out.println("\n===== QUAN LY PHONG =====");
@@ -120,7 +120,7 @@ public class AdminMenu {
         System.out.println(ok ? "Thanh cong" : "That bai");
     }
 
-    // ================= EQUIPMENT =================
+    //  EQUIPMENT
     private void equipmentMenu() {
         while (true) {
             System.out.println("\n===== QUAN LY THIET BI =====");
@@ -172,7 +172,7 @@ public class AdminMenu {
         System.out.println(ok ? "Thanh cong" : "That bai");
     }
 
-    // ================= USER =================
+    //  USER
     private void userMenu() {
         while (true) {
             System.out.println("\n===== QUAN LY USER =====");

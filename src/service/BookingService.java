@@ -28,7 +28,7 @@ public class BookingService {
         this.equipmentService = new EquipmentService();
     }
 
-    // ========== THÊM ĐẶT PHÒNG ==========
+    //  THÊM ĐẶT PHÒNG
     /**
      * Tạo phiếu đặt phòng mới
      */
@@ -61,7 +61,7 @@ public class BookingService {
         return bookingDao.addBooking(booking);
     }
 
-    // ========== THÊM THIẾT BỊ VÀO ĐẶT PHÒNG ==========
+    //  THÊM THIẾT BỊ VÀO ĐẶT PHÒNG
     /**
      * Thêm thiết bị vào phiếu đặt
      */
@@ -75,7 +75,7 @@ public class BookingService {
         return bookingEquipmentDao.addBookingEquipment(detail);
     }
 
-    // ========== THÊM DỊCH VỤ VÀO ĐẶT PHÒNG ==========
+    //  THÊM DỊCH VỤ VÀO ĐẶT PHÒNG
     /**
      * Thêm dịch vụ vào phiếu đặt
      */
@@ -84,7 +84,7 @@ public class BookingService {
         return bookingServiceDao.addBookingService(detail);
     }
 
-    // ========== LẤY THÔNG TIN ĐẶT PHÒNG ==========
+    //  LẤY THÔNG TIN ĐẶT PHÒNG
     /**
      * Lấy phiếu đặt theo ID
      */
@@ -141,7 +141,7 @@ public class BookingService {
         return bookingServiceDao.getServicesByBooking(bookingId);
     }
 
-    // ========== PHÂN CÔNG & DỰA CHỈ ==========
+    //  PHÂN CÔNG & DỰA CHỈ
     /**
      * Duyệt phiếu đặt (Admin)
      */
@@ -175,7 +175,7 @@ public class BookingService {
         return bookingDao.updateBookingStatus(bookingId, "DONE");
     }
 
-    // ========== HỦY ĐẶT PHÒNG ==========
+    //  HỦY ĐẶT PHÒNG
     /**
      * Hủy phiếu đặt (chỉ khi trạng thái PENDING)
      */
@@ -201,7 +201,7 @@ public class BookingService {
         return bookingDao.deleteBooking(bookingId);
     }
 
-    // ========== KIỂM TRA ==========
+    // KIỂM TRA
     /**
      * Lấy tổng số phiếu đặt
      */

@@ -19,7 +19,7 @@ public class Booking {
     private String notes;
     private LocalDateTime createdDate;
 
-    // ========== CONSTRUCTOR ==========
+    // CONSTRUCTOR
     public Booking() {
     }
 
@@ -49,7 +49,7 @@ public class Booking {
         this.createdDate = createdDate;
     }
 
-    // ========== GETTERS ==========
+    //  GETTERS
     public int getId() {
         return id;
     }
@@ -90,7 +90,7 @@ public class Booking {
         return createdDate;
     }
 
-    // ========== SETTERS ==========
+    // SETTERS
     public void setId(int id) {
         this.id = id;
     }

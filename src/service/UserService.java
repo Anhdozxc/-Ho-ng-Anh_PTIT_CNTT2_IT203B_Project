@@ -17,7 +17,7 @@ public class UserService {
         this.userDao = new UserDao();
     }
 
-    // ========== ĐĂNG KÝ TÀI KHOẢN ==========
+    //  ĐĂNG KÝ TÀI KHOẢN
     /**
      * Đăng ký tài khoản mới cho nhân viên
      * @return true nếu đăng ký thành công
@@ -60,7 +60,7 @@ public class UserService {
         return userDao.addUser(newUser);
     }
 
-    // ========== ĐĂNG NHẬP ==========
+    //  ĐĂNG NHẬP
     public User login(String username, String password) {
         if (!ValidationUtil.isNotEmpty(username) || !ValidationUtil.isNotEmpty(password)) {
             System.out.println("Lỗi: Username hoặc mật khẩu không được để trống");
@@ -91,7 +91,7 @@ public class UserService {
         return user;
     }
 
-    // ========== CẬP NHẬT HỒNG SƠ ==========
+    // CẬP NHẬT HỒNG SƠ
     /**
      * Cập nhật thông tin cá nhân
      */
@@ -133,7 +133,7 @@ public class UserService {
         return userDao.changePassword(userId, hashedNewPassword);
     }
 
-    // ========== QUẢN LÝ NGƯỜI DÙNG (ADMIN ONLY) ==========
+    //  QUẢN LÝ NGƯỜI DÙNG (ADMIN ONLY)
     public boolean createSupportStaffAccount(String username, String password, String fullname,
                                              String phone, String department) {
         if (!ValidationUtil.isValidUsername(username)) {

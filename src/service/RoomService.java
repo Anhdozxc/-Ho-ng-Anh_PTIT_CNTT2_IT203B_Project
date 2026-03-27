@@ -15,7 +15,7 @@ public class RoomService {
         this.roomDao = new RoomDao();
     }
 
-    // ========== THÊM PHÒNG ==========
+    // THÊM PHÒNG
     /**
      * Thêm phòng họp mới
      */
@@ -46,7 +46,7 @@ public class RoomService {
         return roomDao.addRoom(newRoom);
     }
 
-    // ========== CẬP NHẬT PHÒNG ==========
+    //  CẬP NHẬT PHÒNG
     public boolean updateRoom(int roomId, String name, int capacity, String location,
                               String fixedEquipment, String status) {
         Room room = roomDao.getRoomById(roomId);
@@ -73,7 +73,7 @@ public class RoomService {
         return roomDao.updateRoomStatus(roomId, status);
     }
 
-    // ========== LẤY THÔNG TIN PHÒNG ==========
+    // LẤY THÔNG TIN PHÒNG
     /**
      * Lấy danh sách tất cả phòng
      */
@@ -109,7 +109,7 @@ public class RoomService {
         return roomDao.getRoomsByStatus(status);
     }
 
-    // ========== XÓA PHÒNG ==========
+    //  XÓA PHÒNG
     /**
      * Xóa phòng
      */
@@ -117,7 +117,7 @@ public class RoomService {
         return roomDao.deleteRoom(roomId);
     }
 
-    // ========== KIỂM TRA ==========
+    //  KIỂM TRA
     /**
      * Kiểm tra phòng có đủ sức chứa không
      */

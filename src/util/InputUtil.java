@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class InputUtil {
     private static Scanner scanner = new Scanner(System.in);
 
-    // ========== NHẬP SỐ NGUYÊN ==========
+    //  NHẬP SỐ NGUYÊN
     /**
      * Nhập số nguyên từ người dùng
      * @param prompt Thông điệp nhắc nhở
@@ -39,7 +39,7 @@ public class InputUtil {
         }
     }
 
-    // ========== NHẬP SỐ THẬP PHÂN ==========
+    //  NHẬP SỐ THẬP PHÂN
     public static double inputDouble(String prompt) {
         while (true) {
             try {
@@ -52,7 +52,7 @@ public class InputUtil {
         }
     }
 
-    // ========== NHẬP CHUỖI ==========
+    //  NHẬP CHUỖI
     public static String inputString(String prompt) {
         System.out.print(prompt);
         String input = scanner.nextLine().trim();
@@ -69,7 +69,7 @@ public class InputUtil {
         }
     }
 
-    // ========== NHẬP NGÀY GIỜ ==========
+    // NHẬP NGÀY GIỜ
     public static LocalDateTime inputDateTime(String prompt) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
         while (true) {
@@ -83,7 +83,7 @@ public class InputUtil {
         }
     }
 
-    // ========== NHẬP LỰA CHỌN ==========
+    //  NHẬP LỰA CHỌN
     public static int inputChoice(String prompt, int minChoice, int maxChoice) {
         while (true) {
             int choice = inputInt(prompt);
@@ -94,7 +94,7 @@ public class InputUtil {
         }
     }
 
-    // ========== NHẬP ĐIỆN THOẠI ==========
+    // NHẬP ĐIỆN THOẠI
     public static String inputPhone(String prompt) {
         while (true) {
             String phone = inputNonEmptyString(prompt);
@@ -105,7 +105,7 @@ public class InputUtil {
         }
     }
 
-    // ========== NHẬP EMAIL ==========
+    //  NHẬP EMAIL
     public static String inputEmail(String prompt) {
         while (true) {
             String email = inputNonEmptyString(prompt);
@@ -116,7 +116,7 @@ public class InputUtil {
         }
     }
 
-    // ========== NHẬP USERNAME ==========
+    //  NHẬP USERNAME
     public static String inputUsername(String prompt) {
         while (true) {
             String username = inputNonEmptyString(prompt);
@@ -127,7 +127,7 @@ public class InputUtil {
         }
     }
 
-    // ========== NHẬP MẬT KHẨU ==========
+    //  NHẬP MẬT KHẨU
     public static String inputPassword(String prompt) {
         while (true) {
             String password = inputNonEmptyString(prompt);
@@ -138,7 +138,7 @@ public class InputUtil {
         }
     }
 
-    // ========== NHẬP TÊN NGƯỜI DÙNG ==========
+    //  NHẬP TÊN NGƯỜI DÙNG
     public static String inputFullName(String prompt) {
         while (true) {
             String fullname = inputNonEmptyString(prompt);
